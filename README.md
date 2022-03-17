@@ -1,0 +1,1 @@
+# skip-ad-short-cut
