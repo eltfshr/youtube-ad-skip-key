@@ -1,0 +1,50 @@
+body {
+  font-family: Roboto;
+  width: 120px;
+}
+
+.title {
+  display: flex;
+}
+
+.shortcut {
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+  font-weight: 600;
+  color: #707070;
+}
+
+.button-div {
+  align-self: center;
+}
+
+#input {
+  width: 20px;
+  height: 20px;
+  color: transparent;
+  border-width: 3px;
+  border-color: #be1e2d;
+}
+
+#input::placeholder {
+  font-weight: bold;
+  text-align: center;
+}
+
+#input:focus {
+  outline: none !important;
+  border-color: grey;
+}
+
+#input:focus::placeholder {
+  color: transparent;
+}
+
+.skip {
+  color: #be1e2d;
+}
+
+.key {
+  color: grey;
+}
