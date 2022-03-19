@@ -1,12 +1,12 @@
 document.getElementsByTagName('body')[0].focus()
 let sKey
 
-chrome.storage.sync.get("key", ({ key }) => {
+chrome.storage.local.get("key", ({ key }) => {
   sKey = key
 })
 
 chrome.storage.onChanged.addListener(() => {
-  chrome.storage.sync.get("key", ({ key }) => {
+  chrome.storage.local.get("key", ({ key }) => {
     sKey = key
   })
 })
@@ -16,10 +16,11 @@ document.addEventListener('keypress', (e) => {
     return
   }
 
-  let countDown = document.getElementsByClassName('ytp-ad-preview-container countdown-next-to-thumbnail')[0]
+  let countDown = document.getElementsByClassName('ytp-ad-preview-container')[0] || null
+  let pie = document.getElementsByClassName('ytp-ad-timed-pie-countdown-container')[0] || null
   let button
 
-  if (countDown && countDown.getAttribute('style') == 'display: none;') {
+  if ((countDown && countDown.getAttribute('style').includes('display: none;')) || pie) {
     button = document.getElementsByClassName('ytp-ad-skip-button ytp-button')[0] || null
   } else {
     button = document.getElementsByClassName('ytp-ad-overlay-close-container')[0] || null

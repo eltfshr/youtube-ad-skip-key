@@ -1,7 +1,7 @@
 {
   "name": "Youtube Ad Skip Key",
   "description": "Skip Youtube ads with a shortcut key",
-  "version": "0.1",
+  "version": "0.2",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"

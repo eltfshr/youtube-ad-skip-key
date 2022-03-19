@@ -1,6 +1,6 @@
 let input = document.getElementById('input')
 
-chrome.storage.sync.get("key", ({ key }) => {
+chrome.storage.local.get("key", ({ key }) => {
   processKey(key)
 })
 
@@ -8,7 +8,7 @@ input.addEventListener('keypress', (e) => {
   input.blur()
   let key = e.code
   processKey(key)
-  chrome.storage.sync.set({ key })
+  chrome.storage.local.set({ key })
 })
 
 function processKey(key) {
