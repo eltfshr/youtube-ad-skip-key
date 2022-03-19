@@ -1,12 +1,17 @@
 let input = document.getElementById('input')
 
 chrome.storage.sync.get("key", ({ key }) => {
-  input.setAttribute('placeholder', key.charAt(key.length - 1))
+  processKey(key)
 })
 
 input.addEventListener('keypress', (e) => {
   input.blur()
   let key = e.code
+  processKey(key)
+  chrome.storage.sync.set({ key })
+})
+
+function processKey(key) {
   switch (key) {
     case 'Minus':
       input.setAttribute('placeholder', '-')
@@ -47,5 +52,4 @@ input.addEventListener('keypress', (e) => {
     default:
       input.setAttribute('placeholder', key.charAt(key.length - 1))
   }
-  chrome.storage.sync.set({ key })
-})
+}
