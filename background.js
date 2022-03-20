@@ -1,4 +1,4 @@
-let key = 'KeyS'
+let key = 'KeyZ'
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.local.set({ key })
