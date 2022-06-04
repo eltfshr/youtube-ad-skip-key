@@ -26,6 +26,10 @@ document.addEventListener('keypress', (e) => {
     button = document.getElementsByClassName('ytp-ad-overlay-close-container')[0] || null
   }
 
+  if (document.getElementsByClassName('dismiss-button').length != 0) {
+    button = document.getElementsByClassName('dismiss-button')[0] || null
+  }
+
   if (button && e.target.tagName != 'INPUT' && e.target.className != 'style-scope yt-formatted-string') {
     button.click()
   }
