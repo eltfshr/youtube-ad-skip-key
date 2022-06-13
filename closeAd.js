@@ -26,8 +26,8 @@ document.addEventListener('keypress', (e) => {
     button = document.getElementsByClassName('ytp-ad-overlay-close-container')[0] || null
   }
 
-  if (document.getElementsByClassName('dismiss-button').length != 0) {
-    button = document.getElementsByClassName('dismiss-button')[0] || null
+  if (!document.querySelector('ytd-button-renderer#dismiss-button').parentElement.parentElement.parentElement.parentElement.getAttribute('style').includes('display: none;')) {
+    button = document.querySelector('ytd-button-renderer#dismiss-button') || null
   }
 
   if (button && e.target.tagName != 'INPUT' && e.target.className != 'style-scope yt-formatted-string') {
