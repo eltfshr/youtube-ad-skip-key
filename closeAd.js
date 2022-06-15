@@ -26,7 +26,7 @@ document.addEventListener('keypress', (e) => {
     button = document.getElementsByClassName('ytp-ad-overlay-close-container')[0] || null
   }
 
-  if (!document.querySelector('ytd-button-renderer#dismiss-button').parentElement.parentElement.parentElement.parentElement.getAttribute('style').includes('display: none;')) {
+  if (document.querySelector('ytd-button-renderer#dismiss-button') && !document.querySelector('ytd-button-renderer#dismiss-button').parentElement.parentElement.parentElement.parentElement.getAttribute('style').includes('display: none;')) {
     button = document.querySelector('ytd-button-renderer#dismiss-button') || null
   }
 
