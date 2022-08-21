@@ -12,7 +12,7 @@
 ### 🛠 What does it do?
 - Youtube Ad Skip Key is an extension that provides you a shortcut key/ button to skip youtube ads. It does not block ads.
 
-- This extension simulates the process of clicking "Skip Ads", clicking the "x" button of those ads at the bottom of the Youtube player and clicking the "No Thanks" of Youtube Premium ads.
+- This extension simulates the process of clicking "Skip Ads", clicking the "x" button of those ads at the bottom of the Youtube player and clicking the "No Thanks" or "Skip Trial" of Youtube Premium ads.
 
 - This is for people who still want to support creators by watching ads, and sometimes don't want to skip ads right when the timer ends because some ads are interesting. It also closes those ads at the bottom and Youtube Premium ads that sometimes pop up.
 

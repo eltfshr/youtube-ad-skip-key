@@ -30,6 +30,10 @@ document.addEventListener('keypress', (e) => {
     button = document.querySelector('ytd-button-renderer#dismiss-button') || null
   }
 
+  if (document.querySelector('yt-button-renderer#dismiss-button') && !document.querySelector('yt-button-renderer#dismiss-button').parentElement.parentElement.parentElement.parentElement.getAttribute('style').includes('display: none;')) {
+    button = document.querySelector('yt-button-renderer#dismiss-button') || null
+  }
+
   if (button && e.target.tagName != 'INPUT' && e.target.className != 'style-scope yt-formatted-string') {
     button.click()
   }
