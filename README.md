@@ -18,6 +18,7 @@
 
 - The default shortcut key is 'Z'. This extension only supports typing keys such as "A-Z", "0-9", "-=[]\;'./~", numpad keys, spacebar and enter key.
 
+- *The keys are based from QWERTY keyboard layout. However, it is based on the location not the value of the key itself. For example, users can press key from other languages that is supposed to be in the same location as QWERTY 'Z' key, so they don't need to change keyboard language back to English to skip ads.
 - *You must change tabs to the ad-playing youtube tab to be able to close the ad.
 - *You should avoid assigning shortcut to keys that are already assigned by Youtube such as A, C, D, F, I, J, K, L, M, N, O, P, S, T, W, "0-9", <, >, /, [, ], -, =, Numpad+, Numpad-, Numpad0-9 and Spacebar
 - *If you are also using Youtube Music, you should also avoid these keys: E, G, H, Q, R, ;
