@@ -21,7 +21,7 @@ document.addEventListener('keypress', (e) => {
   let button
 
   if ((countDown && countDown.getAttribute('style').includes('display: none;')) || pie) {
-    button = document.getElementsByClassName('ytp-ad-skip-button ytp-button')[0] || null
+    button = document.getElementsByClassName('ytp-ad-skip-button-modern ytp-button')[0] || document.querySelectorAll('[id^="skip-button"]')[1].childNodes[0].childNodes[0] || document.getElementsByClassName('ytp-ad-skip-button ytp-button')[0] || null
   } else {
     button = document.getElementsByClassName('ytp-ad-overlay-close-container')[0] || null
   }
