@@ -27,3 +27,5 @@
 ### 🔎 Where can I find it?
 - You can install it [here](https://chrome.google.com/webstore/detail/youtube-ad-skip-key/hgijpdhbgbfknajdponodgdehhafcbbp).
 
+### 👁 Privacy Policy
+- This extension does not handle any user data
