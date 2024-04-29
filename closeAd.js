@@ -26,14 +26,15 @@ document.addEventListener('keypress', (e) => {
   // close youtube premium ads
   let premium = document.querySelector('yt-button-renderer[id*="dismiss"][id*="button"]') || document.querySelector('ytp-button-renderer[id*="dismiss"][id*="button"]') || document.querySelector('ytd-button-renderer[id*="dismiss"][id*="button"]') || null
 
+  // bottom overlay square
+  button = document.querySelectorAll('button[class*="overlay"][class*="ad"][class*="close"]')[0] || document.getElementsByClassName('ytp-ad-overlay-close-container')[0] || null
+
   if (premium && !premium.parentElement.parentElement.parentElement.parentElement.getAttribute('style').match(/display.*none/g) !== null) {
     button = premium || null
   }
 
   if ((countDown && (countDown.getAttribute('style').match(/display.*none/g)) !== null) || pie) { // normal skip ad
     button = document.querySelectorAll('button[class*="skip"][class*="ad"]')[0] || document.querySelectorAll('[id^="skip-button"]')[1].childNodes[0].childNodes[0] || null
-  } else { // bottom overlay square
-    button = document.querySelectorAll('button[class*="overlay"][class*="ad"][class*="close"]')[0] || document.getElementsByClassName('ytp-ad-overlay-close-container')[0] || null
   }
 
   // skip ad if focus is not on input boxes
