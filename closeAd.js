@@ -21,6 +21,8 @@ document.addEventListener('keypress', (e) => {
 
   // pie is the upper right circle pie
   let pie = document.querySelectorAll('div[class*="pie"][class*="countdown"]')[0] || null
+  // survey is the multiple choices about brands
+  let survey = document.querySelectorAll('div[class*="survey"]')[0] || null
   let button
 
   // close youtube premium ads
@@ -33,12 +35,13 @@ document.addEventListener('keypress', (e) => {
     button = premium || null
   }
 
-  if ((countDown && (countDown.getAttribute('style').match(/display.*none/g)) !== null) || pie) { // normal skip ad
+  if ((countDown && (countDown.getAttribute('style').match(/display.*none/g)) !== null) || pie || survey) { // normal skip ad
     button = document.querySelectorAll('button[class*="skip"][class*="ad"]')[0] || document.querySelectorAll('[id^="skip-button"]')[1].childNodes[0].childNodes[0] || null
   }
 
   // skip ad if focus is not on input boxes
   if (button && e.target.tagName != 'INPUT' && e.target.className.match(/style.*scope.*formatted.*string/g) === null) {
     button.click()
+    button.focus()
   }
 })
