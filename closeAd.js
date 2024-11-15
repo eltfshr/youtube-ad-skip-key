@@ -1,5 +1,5 @@
 document.getElementsByTagName('body')[0].focus()
-let sKey
+let sKey = "KeyZ"
 
 chrome.storage.local.get("key", ({ key }) => {
   sKey = key
