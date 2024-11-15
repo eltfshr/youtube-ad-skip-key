@@ -31,13 +31,13 @@ document.addEventListener('keypress', (e) => {
   // bottom overlay square
   button = document.querySelectorAll('button[class*="overlay"][class*="ad"][class*="close"]')[0] || document.getElementsByClassName('ytp-ad-overlay-close-container')[0] || null
 
-  let isButtonReady = document.querySelectorAll('button[class*="skip"][class*="ad"]')[0] && document.querySelectorAll('button[class*="skip"][class*="ad"]')[0].getAttribute('style').match(/display.*none/g) === null
+  let isButtonReady = document.querySelectorAll('button[class*="skip"][class*="ad"]')[0] && ((document.querySelectorAll('button[class*="skip"][class*="ad"]')[0].getAttribute('style') && document.querySelectorAll('button[class*="skip"][class*="ad"]')[0].getAttribute('style').match(/display.*none/g) === null) || !(document.querySelectorAll('button[class*="skip"][class*="ad"]')[0].getAttribute('style')))
 
   if ((countDown && (countDown.getAttribute('style').match(/display.*none/g)) !== null) || pie || survey || isButtonReady) { // normal skip ad
     button = document.querySelectorAll('button[class*="skip"][class*="ad"]')[0] || document.querySelectorAll('[id^="skip-button"]')[1].childNodes[0].childNodes[0] || null
   }
 
-  if (premium && !premium.parentElement.parentElement.parentElement.parentElement.getAttribute('style').match(/display.*none/g) !== null) {
+  if (premium && !(premium.parentElement.parentElement.parentElement.parentElement.getAttribute('style').match(/display.*none/g) !== null)) {
     button = premium || null
   }
 
